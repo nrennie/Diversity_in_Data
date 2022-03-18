@@ -161,7 +161,9 @@ tb <- tab_data %>%
   tab_style(
     style = list(cell_fill(color = "#e4edf4")),
     locations = cells_body(rows = seq(1,9,2))
-  )
+  ) %>%
+  tab_options(table.width = 1035,
+              container.width = 1035)
 
 gtsave(tb,"2021/languages.png")
 
